@@ -23,14 +23,16 @@ class FirstScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () =>
                   Navigator.pushNamed(context, RouterInfo.secondScreen),
-              child: Text("Open Second Screen"),
+              child: const Text("Open Second Screen"),
             ),
             ElevatedButton(
               onPressed: () => Navigator.of(context, rootNavigator: true).push(
-                  MaterialPageRoute(
-                      builder: (_) => SecondScreen(
-                          title: "$title ==> From First screen as seperate "))),
-              child: Text("Open Second Screen seperately"),
+                MaterialPageRoute(
+                  builder: (_) => SecondScreen(
+                      title: "$title ==> From First screen as seperate "),
+                ),
+              ),
+              child: const Text("Open Second Screen seperately"),
             )
           ],
         ),
